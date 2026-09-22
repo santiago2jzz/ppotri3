@@ -1,0 +1,84 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    border: 0;
+    margin: 0;
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 20% 30%, #e10600 0%, transparent 45%),
+        radial-gradient(circle at 80% 70%, #0066ff 0%, transparent 45%),
+        linear-gradient(135deg, #0a0a0a, #1a1a1a);
+}
+
+.background {
+    backdrop-filter: blur(10px);
+    height: 100vh;
+}
+
+h1 {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+
+.text {
+    color: #ffffff;
+    font-size: 14px;
+    top: 60px;
+    font-family: "Titillium Web", sans-serif;
+    text-align: center;
+}
+
+.anuncio {
+    color: #0a0a0a;
+    background-color: #ffffff;
+    border-radius: 7px;
+    border: none;
+    font-size: 20px;
+    top: 85px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 530;
+    font-style: normal;
+    text-align: center;
+
+}
+
+.glass-card {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    top: 170px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    width: min(600px, 90vw);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.45),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.18) 0%,
+            transparent 45%);
+    pointer-events: none;
+}
