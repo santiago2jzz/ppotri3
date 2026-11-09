@@ -1,0 +1,26 @@
+{
+  "name": "ppotri3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/santiago2jzz/ppotri3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/santiago2jzz/ppotri3/issues"
+  },
+  "homepage": "https://github.com/santiago2jzz/ppotri3#readme",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "express": "^5.3.0"
+  }
+}

@@ -1,26 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="pt-BR">
 
 <head>
+
+
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
-        rel="stylesheet">
-    <title>F1 Race Companion</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>F1 Race Companion — 2026</title>
+
+
+
+
 </head>
 
 <body>
-    <div class="background">
-        <div class="glass-card">
-            <h1>Fórmula 1</h1>
-            <p class="text">Acompanhe a corrida em tempo real e não perca nenhuma batalha.</p>
-            <button class="anuncio">Próxima corrida</button>
-        </div>
-    </div>
+
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                F1 <span>Race Companion</span>
+            </div>
+</div>
+
+    </header>
+
+    <main>
+
+        <section id="paginaInicio" class="pagina ativa">
+
+            <div class="hero">
+
+                <div class="hero-label">
+                    F1 Race Companion
+                </div>
+
+                <h1>
+                    Acompanhe cada momento da corrida.
+                </h1>
+
+                <p>
+                    Consulte as próximas etapas, veja
+                    circuitos e acompanhe o Live Timing
+                    em tempo real.
+                </p>
+
+            </div>
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Calendário 2026</h2>
+                    <div class="linha-vermelha"></div>
+
+                </div>
+
+            </div>
+
+            <div id="corridaAtual" class="corrida-atual">
+                <div class="corrida-atual-conteudo">
+                    <div class="hero-label">Grande Prêmio em andamento</div>
+                    <h2 id="corridaAtualNome">Carregando calendário...</h2>
+                    <p id="corridaAtualCircuito">Verificando a etapa atual.</p>
+                </div>
+                <div class="corrida-atual-data" id="corridaAtualData">—</div>
+            </div>
+
+            <div id="calendarioDinamico" class="corridas"></div>
+
+            <div class="section-header">
+                <div>
+                    <h2>Live Timing</h2>
+                    <div class="linha-vermelha"></div>
+                </div>
+            </div>
+
+            <div class="sessao-resumo">
+                <div id="sessaoInfo">
+                    <div class="sessao-titulo">Verificando sessão...</div>
+                    <div class="sessao-detalhes">Conectando ao servidor local</div>
+                </div>
+                <button class="nav-button" onclick="abrirLiveTiming()">Abrir Live Timing</button>
+            </div>
+
+            
+
+        </section>
+
+        <section id="paginaLive" class="pagina">
+
+            <div class="live-header">
+
+                <div>
+
+                    <h1>
+                        Live Timing
+                    </h1>
+
+                    <div class="linha-vermelha"></div>
+
+                </div>
+
+                <button class="nav-button" onclick="voltarInicio()">
+                    Voltar ao calendário
+                </button>
+
+            </div>
+
+            <div id="status" class="status-sessao">
+                Verificando sessão...
+            </div>
+
+            <div class="sessao-live-info">
+                <div class="sessao-live-card">
+                    <div class="sessao-live-label">Sessão atual</div>
+                    <div class="sessao-live-nome" id="sessaoAtualLive">Verificando...</div>
+                    <div class="sessao-live-status" id="sessaoAtualStatusLive">Aguardando dados</div>
+                </div>
+                <div class="sessao-live-card">
+                    <div class="sessao-live-label">Próxima sessão</div>
+                    <div class="sessao-live-nome" id="proximaSessaoLive">Verificando...</div>
+                    <div class="sessao-live-status" id="proximaSessaoStatusLive">Aguardando dados</div>
+                </div>
+            </div>
+
+            <div id="ultimaAtualizacao" class="atualizacao">Aguardando dados...</div>
+
+            <div class="abas">
+
+                <button class="aba ativa" id="abaClassificacao" onclick="abrirAba('classificacao')">
+                    Classificação
+                </button>
+
+                <button class="aba" id="abaStints" onclick="abrirAba('stints')">
+                    Stints de pneus
+                </button>
+
+            </div>
+
+            <div id="conteudoClassificacao" class="conteudo-aba ativa">
+
+                <div class="tabela-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Pos.</th>
+                                <th>Piloto</th>
+                                <th>Equipe</th>
+                                <th>Pneu</th>
+                                <th>Gap</th>
+                                <th>Melhor volta</th>
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tabela"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div id="conteudoStints" class="conteudo-aba">
+
+                <div id="stintsGrid" class="stints-grid">
+
+                    <div class="stints-vazio">
+                        Carregando estratégia de pneus...
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <script src="main.js"></script>
+
 </body>
 
 </html>
