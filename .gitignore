@@ -1,0 +1,5 @@
+node_modules/
+usuarios.sqlite
+usuarios.sqlite-shm
+usuarios.sqlite-wal
+session.secret

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <title>Entrar — F1 Race Companion</title>
+  <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="auth-brand">
+      <div class="brand-mark">F1 <span>Race Companion</span></div>
+      <div class="brand-copy">
+        <p class="eyebrow">F1 RACE COMPANION</p>
+        <h1>A corrida começa<br>com você.</h1>
+        <p>Acompanhe o calendário e os dados da Fórmula 1 em um só lugar.</p>
+      </div>
+      <div class="brand-footer">SEU BOX DE INFORMAÇÕES DA FÓRMULA 1</div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="mobile-brand">F1 <span>Race Companion</span></div>
+        <p class="eyebrow">ÁREA DO USUÁRIO</p>
+        <h2 id="form-title">Bem-vindo de volta</h2>
+        <p class="subtitle" id="form-subtitle">Entre com sua conta para continuar.</p>
+
+        <div class="auth-tabs" role="tablist" aria-label="Acesso">
+          <button class="tab active" id="tab-login" type="button">Entrar</button>
+          <button class="tab" id="tab-register" type="button">Criar conta</button>
+        </div>
+
+        <form id="login-form" class="auth-form">
+          <label for="login-usuario">Nome de usuário</label>
+          <input id="login-usuario" name="usuario" type="text" autocomplete="username" minlength="3" maxlength="24" required placeholder="Seu usuário">
+          <label for="login-senha">Senha</label>
+          <input id="login-senha" name="senha" type="password" autocomplete="current-password" required placeholder="Sua senha">
+          <p class="form-message" id="login-message" aria-live="polite"></p>
+          <button class="submit-button" type="submit">Entrar na plataforma</button>
+        </form>
+
+        <form id="register-form" class="auth-form" hidden>
+          <label for="register-usuario">Escolha um nome de usuário</label>
+          <input id="register-usuario" name="usuario" type="text" autocomplete="username" minlength="3" maxlength="24" required placeholder="De 3 a 24 caracteres">
+          <label for="register-senha">Crie uma senha</label>
+          <input id="register-senha" name="senha" type="password" autocomplete="new-password" minlength="8" required placeholder="Mínimo de 8 caracteres">
+          <label for="register-confirmar">Confirme sua senha</label>
+          <input id="register-confirmar" name="confirmarSenha" type="password" autocomplete="new-password" minlength="8" required placeholder="Digite a senha novamente">
+          <p class="form-message" id="register-message" aria-live="polite"></p>
+          <button class="submit-button" type="submit">Criar minha conta</button>
+        </form>
+        <p class="auth-note">Suas credenciais são armazenadas localmente no banco de usuários.</p>
+      </div>
+    </section>
+  </main>
+  <script src="/login.js"></script>
+</body>
+</html>
