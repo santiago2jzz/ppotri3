@@ -19,7 +19,7 @@ db.pragma('journal_mode = WAL');
 const sql = fs.readFileSync(sqlPath, 'utf8');
 db.exec(sql);
 
-console.log('Banco de dados conectado!');
+console.log('Banco de dados conectado.');
 
 
 app.use(express.json());
